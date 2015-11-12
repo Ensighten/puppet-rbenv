@@ -3,9 +3,10 @@
 # This module manages rbenv dependencies for Debian $::osfamily.
 #
 class rbenv::deps::debian {
+  require git
   ensure_packages([
     'build-essential',
-    'git',
+#    'git',
     'libreadline6-dev',
     'libssl-dev',
     'zlib1g-dev',
